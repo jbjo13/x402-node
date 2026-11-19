@@ -2,11 +2,12 @@
   "name": "x402-node",
   "version": "1.0.0",
   "description": "Autonomous x402 pay-per-request blockchain data node on Base",
+  "type": "module",
   "main": "dist/server.js",
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "ts-node src/server.ts"
+    "dev": "node --loader ts-node/esm src/server.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
